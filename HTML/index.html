@@ -1,0 +1,20 @@
+<p>Diga seu nome:</p>
+<span style="color: green; font-size: 72px" id="informaNome"></span>
+<script>
+  //   let idade = 5
+  //   if (idade >= 18) {
+  //     maioridade(true)
+  //   } else {
+  //     maioridade(false)
+  //   }
+
+  //   function maioridade(ehMaior) {
+  //     console.log(ehMaior == true ? 'Maior de Idade' : 'Menor de Idade')
+  //   }
+  // Apartir daqui vou escreve no código html o nome da pessoa
+  let nome = prompt('Escreva seu nome:')
+  let objetoSpan = document.getElementById('informaNome')
+  if (nome != '') {
+    objetoSpan.innerHTML = nome
+  }
+</script>
