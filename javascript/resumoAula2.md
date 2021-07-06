@@ -66,9 +66,10 @@ const popularBanco = (a, b) => {
 
 ## Contexto público/privado
 
-O contexto para declaração das estruturas se dá pela ordem em os ecopos em que são escritas:
+O contexto para declaração das estruturas se dá pela ordem em que os escopos são escritos:
 
--Escopo público é aquele que é comum e visível a todo o código escrito normalmente não é um filho de uma classe, tipo, function ou estrutura.
+-Escopo público é aquele comum e visível a todo o código escrito, normalmente não é um filho de uma classe, tipo, function ou estrutura.
+
 -Escopo privado é aquele que somente pretence a uma outra estrutura e normalmente está dentro de chaves.
 Ex:
 ```
