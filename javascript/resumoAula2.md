@@ -4,12 +4,13 @@
 A Aula 2 tem o intuito de introduzir o aluno a semântica e aos contextos básicos da programação utilizando-se da linguagem javascript com nodeJS.
 ## Comentários
 
-Os comentários são colocados escrevendo-se "\\\" Comentário 
+Os comentários são colocados escrevendo-se duas barras \ 
 Ex:
 ```
 \\ coloque seu comentário aqui
+
 \*
-  pode se colocar dessa forma também
+  também poderá se colocar dessa forma também
 *\
 ```
 Obs: Os comentários devem ser usados com moderação, se suas funções necessitam de muitos comentários é 
