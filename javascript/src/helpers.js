@@ -11,7 +11,7 @@ const getKey = (resolve) => {
 
 const doTeclado = (msg) => {
   console.log(msg)
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     getKey(resolve)
   })
 }
