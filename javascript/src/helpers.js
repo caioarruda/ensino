@@ -9,10 +9,17 @@ const getKey = (resolve) => {
   })
 }
 
-const doTeclado = (msg) => {
+const textoDoTeclado = (msg) => {
   console.log(msg)
   return new Promise((resolve) => {
     getKey(resolve)
   })
 }
-module.exports = { doTeclado }
+
+const numeroDoTeclado = (msg) => {
+  console.log(msg)
+  return new Promise((resolve) => {
+    getKey(resolve)
+  }).then((x) => Number(x))
+}
+module.exports = { textoDoTeclado, numeroDoTeclado }

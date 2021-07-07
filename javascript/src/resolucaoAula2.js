@@ -1,11 +1,12 @@
-const { doTeclado } = require('./helpers')
+const { textoDoTeclado, numeroDoTeclado } = require('./helpers')
+
 const main = async () => {
-  let nome = await doTeclado('Digite seu nome:')
-  let peso = await doTeclado('Digite seu peso:').then((x) => Number(x))
-  let sexo = await doTeclado(
+  let nome = await textoDoTeclado('Digite seu nome:')
+  let peso = await numeroDoTeclado('Digite seu peso:')
+  let sexo = await textoDoTeclado(
     'Digite seu sexo (f)eminino ou (m)masculino):'
-  ).then((x) => Number(x))
-  let altura = await doTeclado('Digite sua altura:').then((x) => Number(x))
+  )
+  let altura = await numeroDoTeclado('Digite sua altura:')
 
   function getPesoIdeal() {
     if (sexo == 'm') {
@@ -29,8 +30,8 @@ const main = async () => {
   console.log('Função Comissão')
   console.log('-----------------')
 
-  let salariofixo = 1300
-  let totalvendas = 1000
+  let salariofixo = await numeroDoTeclado('Qual seu salário:')
+  let totalvendas = await numeroDoTeclado('Valor vendido:')
 
   function getCalcularComissao() {
     const comissao = 0.03
@@ -45,4 +46,5 @@ const main = async () => {
 
   console.log('Valor Recebido: ' + getCalcularComissao())
 }
+
 main()
