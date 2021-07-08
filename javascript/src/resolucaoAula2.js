@@ -1,3 +1,11 @@
+/* Pré requisitos para iniciar o programa
+const { textoDoTeclado, numeroDoTeclado } = require('./helpers')
+
+const main = async() => {
+
+}
+main()
+*/
 const { textoDoTeclado, numeroDoTeclado } = require('./helpers')
 
 const main = async () => {
@@ -15,6 +23,7 @@ const main = async () => {
       return 62.1 * altura - 44.7
     }
   }
+
   console.log('-----------------')
   console.log('Função Peso Ideal')
   console.log('-----------------')
