@@ -1,0 +1,20 @@
+{
+  "name": "escolajs",
+  "version": "1.0.0",
+  "description": "Gerenciamento de um Banco de Alunos para uma Escola de Programação",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "school",
+    "learning",
+    "ensino",
+    "escola",
+    "dev"
+  ],
+  "author": "Caio Arruda",
+  "license": "ISC"
+}

@@ -1,0 +1,91 @@
+<meta charset="UTF-8">
+<head>
+</head>
+<body>
+<canvas width="600" height="400" style="background: #000"></canvas>
+
+
+<script>
+window.onload = () => {
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");	
+	pincel.fillStyle = "black";
+	pincel.fillRect(0,0, 600, 400);
+
+	var xBolinha = 300;
+	var yBolinha = 200;
+	var diametroBolinha = 8;
+	var raio = diametroBolinha / 2;
+	var telaX = 600;
+	var telaY = 400;
+	var velocidadeXBolinha = 1;
+	var velocidadeYBolinha = 1;
+	var movimentaModifica = 10;
+	var localInicialP1 = 155
+
+
+	movimentaBolinha();
+	bolinha();
+	raqueteP1();
+	raqueteP2();
+
+
+	function bolinha() {
+		pincel.fillStyle = "white"
+		pincel.beginPath();	
+		pincel.arc(xBolinha, yBolinha, diametroBolinha, 0, 2 * Math.PI);
+		pincel.fill();
+		pincel.closePath();
+		
+	}
+
+	function movimentaBolinha() {
+		pincel.clearRect(0, 0, telaX, telaY);
+		bolinha();
+		xBolinha += velocidadeXBolinha;
+		yBolinha += velocidadeYBolinha;
+		
+		if (xBolinha + raio > telaX || xBolinha - raio < 0) {
+			velocidadeXBolinha *= -1;
+		}
+		if (yBolinha + raio > telaY || yBolinha - raio < 0) {
+			velocidadeYBolinha *= -1;
+		}
+		raqueteP1();
+		raqueteP2();
+	}
+
+	setInterval(movimentaBolinha, 10)
+
+	function raqueteP1() {
+
+		pincel.fillStyle = "white"
+		pincel.fillRect(10,localInicialP1, 10, 90);
+		pincel.fill();
+	}
+
+	function raqueteP2() {
+
+		pincel.fillStyle = "white"
+		pincel.fillRect(580,155, 10, 90);
+		pincel.fill();
+	}
+
+
+	function movimentoRaqueteP1(e) {
+
+			if(e.keyCode == 38) {
+
+				localInicialP1 = localInicialP1 - movimentaModifica;
+
+			} if (e.keyCode == 40) {
+
+				localInicialP1 = localInicialP1 + movimentaModifica;
+
+			}
+	}
+
+	document.onkeydown = movimentoRaqueteP1;
+}
+</script>
+</body>
