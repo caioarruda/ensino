@@ -12,6 +12,10 @@ Criar um sistema de controle para uma pequena escola de programação, gerencian
 alunos, professores, notas e afins com fim educacional.
 
 Criar um sistema em módulos explorando novas tecnologias e metodologias como:
+- Git versionamento
+- Testes Automatizados
+- TDD
+- MongoDB
 - API Backend NodeJS
 - FrontEnd ReactJs
 - Microserviços
