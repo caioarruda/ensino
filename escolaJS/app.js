@@ -6,7 +6,9 @@ const escreverNome = (nomePessoa) => {
 
 const main = async () => {
   const nome = await textoDoTeclado('nome: ')
-  escreverNome(nome)
+  const idade = await numeroDoTeclado('idade: ')
+  escreverNome(nome + ' com ' + idade + ' anos')
+  // let media = (a * 2 + b * 2 + c) / 3
 }
 
 main()
