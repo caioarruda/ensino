@@ -26,6 +26,6 @@ Criar um sistema em módulos explorando novas tecnologias e metodologias como:
 
 ## Link para os Vídeos dos Encontros Semanais
 
-- Aula 1 - Introdução e Revisão JS - https://youtu.be/szyeJ6aJ3M8
+- Aula 1 - Introdução e Revisão JS - https://youtu.be/szyeJ6aJ3M8 - 05/08/21 - Monitor: Caio Arruda
 
 

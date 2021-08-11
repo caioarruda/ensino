@@ -1,11 +1,18 @@
 const { textoDoTeclado, numeroDoTeclado } = require('./helpers/teclado')
-const { escreverNome } = require('./helpers/tela')
+const { escreverNome, escreverNaTela } = require('./helpers/tela')
 const { calcularMedia } = require('./helpers/calculos')
+const fs = require('fs')
 
 const main = async () => {
+  const pathAlunos = 'bd/alunos.json'
+  const alunosFile = fs.existsSync(pathAlunos)
+    ? fs.readFileSync(pathAlunos)
+    : '[]'
+  const alunoBd = JSON.parse(alunosFile)
   let fim = ''
   let avaliacoes = []
-  let alunos = []
+  let alunos = alunoBd ? alunoBd : []
+  const baseMedia = 5
   do {
     const nome = await textoDoTeclado('Digite o nome do aluno: ')
     const idade = await numeroDoTeclado('Digite a idade do aluno: ')
@@ -27,11 +34,17 @@ const main = async () => {
     alunos.push({
       nome,
       idade,
-      mediaAluno
+      mediaAluno,
+      avaliacoes,
+      aprovacao: mediaAluno >= baseMedia ? 'aprovado' : 'reprovado'
     })
     fim = await textoDoTeclado('Deseja continuar? [S/N] ')
   } while (fim.toUpperCase() != 'N')
-  console.log(alunos)
+  let seGrava = await textoDoTeclado('Deseja Gravar os dados? [S/N] ')
+  if (seGrava.toUpperCase() != 'N') {
+    fs.writeFileSync(pathAlunos, JSON.stringify(alunos))
+    escreverNaTela('Dados salvos com sucesso')
+  }
   process.exit()
 }
 
