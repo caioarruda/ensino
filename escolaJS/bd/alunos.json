@@ -1,0 +1,25 @@
+[{
+	"nome": "caio",
+	"idade": 34,
+	"mediaAluno": 11.5,
+	"avaliacoes": [{
+		"avaliacao": 10,
+		"peso": 2
+	}, {
+		"avaliacao": 3,
+		"peso": 1
+	}],
+	"aprovacao": "aprovado"
+}, {
+	"nome": "Nilton",
+	"idade": 35,
+	"mediaAluno": 13,
+	"avaliacoes": [{
+		"avaliacao": 10,
+		"peso": 1
+	}, {
+		"avaliacao": 8,
+		"peso": 2
+	}],
+	"aprovacao": "aprovado"
+}]
