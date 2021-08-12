@@ -28,4 +28,6 @@ Criar um sistema em módulos explorando novas tecnologias e metodologias como:
 
 - Aula 1 - Introdução e Revisão JS - https://youtu.be/szyeJ6aJ3M8 - 05/08/21 - Monitor: Caio Arruda
 
+- Aula 2 - JSON e Read/Write Files - https://youtu.be/Iszic0SN4eY - 11/08/21 - Monitor: Caio Arruda
+
 
